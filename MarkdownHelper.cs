@@ -17,36 +17,36 @@ public class MarkdownHelper
         return markdown;
     }
 
-    public static string ConvertToMarkDownMy(string input)
-    {
-        dynamic hd = null;
-        hd = HtmlAgilityHelper.CreateHtmlDocument();
-        hd.LoadHtml(input);
+    //public static string ConvertToMarkDownMy(string input)
+    //{
+    //    dynamic hd = null;
+    //    hd = HtmlAgilityHelper.CreateHtmlDocument();
+    //    hd.LoadHtml(input);
 
-        dynamic nodes = null;
-        nodes = HtmlAgilityHelper.Nodes(hd.DocumentNode, true, "*");
-        HtmlHelper.DeleteAttributesFromAllNodes(nodes);
+    //    dynamic nodes = null;
+    //    nodes = HtmlAgilityHelper.Nodes(hd.DocumentNode, true, "*");
+    //    HtmlHelper.DeleteAttributesFromAllNodes(nodes);
 
-        input = hd.DocumentNode.OuterHtml;
+    //    input = hd.DocumentNode.OuterHtml;
 
-        input = ReplacePairTag(input, "bold", "**");
-        input = ReplacePairTag(input, "strong", "**");
-        input = ReplacePairTag(input, "b", "**");
-        input = ReplacePairTag(input, "i", "_");
-        input = ReplacePairTag(input, "strike", "-");
-        input = HtmlHelper.StripAllTags(input);
+    //    input = ReplacePairTag(input, "bold", "**");
+    //    input = ReplacePairTag(input, "strong", "**");
+    //    input = ReplacePairTag(input, "b", "**");
+    //    input = ReplacePairTag(input, "i", "_");
+    //    input = ReplacePairTag(input, "strike", "-");
+    //    input = HtmlHelper.StripAllTags(input);
 
-        input = SHReplace.ReplaceWhiteSpaces(input, " ");
-        input = SHReplace.ReplaceAllDoubleSpaceToSingle2(input);
+    //    input = SHReplace.ReplaceWhiteSpaces(input, " ");
+    //    input = SHReplace.ReplaceAllDoubleSpaceToSingle2(input);
 
 
 
-        input = input.Trim();
+    //    input = input.Trim();
 
-        ClipboardService.SetText(input);
+    //    ClipboardService.SetText(input);
 
-        return input;
-    }
+    //    return input;
+    //}
 
     public static string ReplacePairTag(string input, string tag, string forWhat)
     {
