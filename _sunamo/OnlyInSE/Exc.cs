@@ -1,3 +1,5 @@
+
+namespace SunamoMarkdown;
 using System.Diagnostics;
 using System.Text;
 

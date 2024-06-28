@@ -1,3 +1,5 @@
+
+namespace SunamoMarkdown;
 public class TranslateAble
 {
     
