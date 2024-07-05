@@ -1,5 +1,5 @@
 
-namespace SunamoMarkdown;
+namespace SunamoMarkdown._sunamo.SunamoExceptions.OnlyInSE;
 using System.Diagnostics;
 using System.Text;
 
