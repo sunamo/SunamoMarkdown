@@ -1,4 +1,4 @@
-//namespace SunamoMarkdown._sunamo.SunamoExceptions._AddedToAllCsproj;
+namespace SunamoMarkdown._sunamo;
 
 internal class SH
 {
