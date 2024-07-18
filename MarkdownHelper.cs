@@ -1,5 +1,5 @@
-namespace SunamoMarkdown;
 
+namespace SunamoMarkdown;
 public class MarkdownHelper
 {
     static Type type = typeof(MarkdownHelper);
@@ -43,7 +43,7 @@ public class MarkdownHelper
 
     //    input = input.Trim();
 
-    //    ClipboardService.SetText(input);
+    //    ClipboardHelper.SetText(input);
 
     //    return input;
     //}
