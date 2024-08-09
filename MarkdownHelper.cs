@@ -1,13 +1,13 @@
-
 namespace SunamoMarkdown;
+
 public class MarkdownHelper
 {
-    static Type type = typeof(MarkdownHelper);
+    private static Type type = typeof(MarkdownHelper);
 
     /// <summary>
-    /// Uses Html2Markdown which has dependency HtmlAgilityPack 1.5
-    /// Therefore I Cant replace with 1s standard 1.11.2 and cant compile these project
-    /// Therefore commented and remove nuget package
+    ///     Uses Html2Markdown which has dependency HtmlAgilityPack 1.5
+    ///     Therefore I Cant replace with 1s standard 1.11.2 and cant compile these project
+    ///     Therefore commented and remove nuget package
     /// </summary>
     /// <param name="html"></param>
     public static string ConvertToMarkDown(string html)
@@ -38,7 +38,6 @@ public class MarkdownHelper
 
     //    input = SHReplace.ReplaceWhiteSpaces(input, " ");
     //    input = SHReplace.ReplaceAllDoubleSpaceToSingle2(input);
-
 
 
     //    input = input.Trim();
