@@ -1,15 +1,18 @@
 namespace SunamoMarkdown;
 
+/// <summary>
+/// Helper class for converting HTML to Markdown format.
+/// </summary>
 public class MarkdownHelper
 {
-    private static Type type = typeof(MarkdownHelper);
-
     /// <summary>
-    ///     Uses Html2Markdown which has dependency HtmlAgilityPack 1.5
-    ///     Therefore I Cant replace with 1s standard 1.11.2 and cant compile these project
-    ///     Therefore commented and remove nuget package
+    /// Converts HTML to Markdown format.
+    /// Uses Html2Markdown which has dependency HtmlAgilityPack 1.5.
+    /// Therefore I can't replace with standard 1.11.2 and can't compile these projects.
+    /// Therefore commented and removed nuget package.
     /// </summary>
-    /// <param name="html"></param>
+    /// <param name="html">The HTML string to convert.</param>
+    /// <returns>The converted Markdown string.</returns>
     public static string ConvertToMarkDown(string html)
     {
         var converter = new Converter();
@@ -17,41 +20,18 @@ public class MarkdownHelper
         return markdown;
     }
 
-    //public static string ConvertToMarkDownMy(string input)
-    //{
-    //    dynamic hd = null;
-    //    hd = HtmlAgilityHelper.CreateHtmlDocument();
-    //    hd.LoadHtml(input);
-
-    //    dynamic nodes = null;
-    //    nodes = HtmlAgilityHelper.Nodes(hd.DocumentNode, true, "*");
-    //    HtmlHelper.DeleteAttributesFromAllNodes(nodes);
-
-    //    input = hd.DocumentNode.OuterHtml;
-
-    //    input = ReplacePairTag(input, "bold", "**");
-    //    input = ReplacePairTag(input, "strong", "**");
-    //    input = ReplacePairTag(input, "b", "**");
-    //    input = ReplacePairTag(input, "i", "_");
-    //    input = ReplacePairTag(input, "strike", "-");
-    //    input = HtmlHelper.StripAllTags(input);
-
-    //    input = SHReplace.ReplaceWhiteSpaces(input, " ");
-    //    input = SHReplace.ReplaceAllDoubleSpaceToSingle2(input);
-
-
-    //    input = input.Trim();
-
-    //    ClipboardHelper.SetText(input);
-
-    //    return input;
-    //}
-
-    public static string ReplacePairTag(string input, string tag, string forWhat)
+    /// <summary>
+    /// Replaces opening and closing HTML tags with specified replacement string.
+    /// </summary>
+    /// <param name="input">The input string containing HTML tags.</param>
+    /// <param name="tag">The HTML tag name to replace (without angle brackets).</param>
+    /// <param name="replacement">The string to replace the tags with.</param>
+    /// <returns>The string with replaced tags.</returns>
+    public static string ReplacePairTag(string input, string tag, string replacement)
     {
-        input = input.Replace("<" + tag + ">", forWhat);
-        input = input.Replace("<" + tag + " ", forWhat);
-        input = input.Replace("</" + tag + ">", forWhat);
+        input = input.Replace("<" + tag + ">", replacement);
+        input = input.Replace("<" + tag + " ", replacement);
+        input = input.Replace("</" + tag + ">", replacement);
         return input;
     }
 }
