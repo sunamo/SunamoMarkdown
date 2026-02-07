@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SunamoMarkdown.Tests\\SunamoMarkdown.Tests.csproj" />
+  <Project Path="RunnerMarkdown\\RunnerMarkdown.csproj" />
+  <Project Path="SunamoMarkdown\SunamoMarkdown.csproj" />
+</Solution>
