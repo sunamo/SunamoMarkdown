@@ -23,15 +23,15 @@ public class MarkdownHelper
     /// <summary>
     /// Replaces opening and closing HTML tags with specified replacement string.
     /// </summary>
-    /// <param name="input">The input string containing HTML tags.</param>
+    /// <param name="text">The text containing HTML tags.</param>
     /// <param name="tag">The HTML tag name to replace (without angle brackets).</param>
     /// <param name="replacement">The string to replace the tags with.</param>
     /// <returns>The string with replaced tags.</returns>
-    public static string ReplacePairTag(string input, string tag, string replacement)
+    public static string ReplacePairTag(string text, string tag, string replacement)
     {
-        input = input.Replace("<" + tag + ">", replacement);
-        input = input.Replace("<" + tag + " ", replacement);
-        input = input.Replace("</" + tag + ">", replacement);
-        return input;
+        text = text.Replace("<" + tag + ">", replacement);
+        text = text.Replace("<" + tag + " ", replacement);
+        text = text.Replace("</" + tag + ">", replacement);
+        return text;
     }
 }

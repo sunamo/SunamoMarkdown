@@ -1,20 +1,40 @@
 ### SunamoMarkdown
 
-Part of PlatformIndependentNuGetPackages:
+A wrapper around the [Html2Markdown](https://www.nuget.org/packages/Html2Markdown) library for converting HTML content to Markdown format.
 
-- [nuget.org](https://www.nuget.org/profiles/sunamo)
-- [github.org](https://github.com/sunamo/PlatformIndependentNuGetPackages)
+#### Features
 
-Another links:
+- Convert HTML strings to Markdown via `MarkdownHelper.ConvertToMarkDown()`
+- Replace paired HTML tags with custom strings via `MarkdownHelper.ReplacePairTag()`
 
+#### Installation
+
+```bash
+dotnet add package SunamoMarkdown
+```
+
+#### Usage
+
+```csharp
+using SunamoMarkdown;
+
+// Convert HTML to Markdown
+string markdown = MarkdownHelper.ConvertToMarkDown("<strong>Hello</strong>");
+// Result: "**Hello**"
+
+// Replace HTML tags with custom strings
+string result = MarkdownHelper.ReplacePairTag("<em>text</em>", "em", "_");
+// Result: "_text_"
+```
+
+#### Target Frameworks
+
+`net10.0`, `net9.0`, `net8.0`
+
+#### Links
+
+- [NuGet](https://www.nuget.org/profiles/sunamo)
+- [GitHub](https://github.com/sunamo/PlatformIndependentNuGetPackages)
 - [Developer site](https://sunamo.cz)
 
 Request for new features / bug report / etc: [Mail](mailto:radek.jancik@sunamo.cz) or on GitHub
-## Target Frameworks
-
-**TargetFrameworks:** `net10.0;net9.0;net8.0`
-
-**Reason:** Code uses C# 12.0 features (collection expressions, primary constructors) or dependencies requiring .NET 8.0+:
-- Collection expressions `[]` syntax requires C# 12.0 (net8.0+)
-- Primary constructors require C# 12.0 (net8.0+) 
-- Entity Framework Core 9.x requires net8.0+
