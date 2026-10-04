@@ -1,5 +1,10 @@
 # SunamoMarkdown
 
+## Short description
+
+Obálka nad knihovnou Html2Markdown pro převod HTML obsahu na Markdown. Obsahuje Runner a testy.
+
+
 A wrapper around the [Html2Markdown](https://www.nuget.org/packages/Html2Markdown) library for converting HTML content to Markdown format.
 
 ## Overview
